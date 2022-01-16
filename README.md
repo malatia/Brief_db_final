@@ -1,5 +1,5 @@
 # Brief Dabases
-_(juste en dessous des badges sympatiques à placer)_
+
 
 Ceci est un mini projet réalisé dans le cadre de la promo Dev IA par Simplon de Cannes.
 
