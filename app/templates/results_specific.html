@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Résultats{% endblock %}
+{% block body %}
+<div class="jumbotron">
+    <h1>Résultats</h1>
+    <p class="lead">Voilà les données</p>
+</div>
+
+<table border="1">
+    <tr>
+        {% for key in keys %}
+        <td> {{ key }} </a> </td>
+        {% endfor %}
+    </tr>
+    {% for user in dict_list %}
+    <tr>
+        {% for key, value in user.items() %}
+        <td> {{ value }} </a> </td>
+        {% endfor %}
+    </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}

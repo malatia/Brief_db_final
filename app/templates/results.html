@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Résultats{% endblock %}
+{% block body %}
+<div class="jumbotron">
+    <h1>Résultats</h1>
+    <p class="lead">Voilà les données</p>
+</div>
+
+<img src={{ url_for("static", filename="fig.png" ) }} align=right>
+<table border="1" style="display:inline">
+    {% for name in results1 %}
+
+    <tr>
+        <td><a href={{ url_for("results_specific", name=name, cat=cat) }}> {{ name }} </a> </td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+{% if results2 != None %}
+<table border="1" style="display:inline; padding: 15px">
+    {% for name in results2 %}
+
+    <tr>
+        <td><a href={{ url_for("results_specific", name=name, cat=cat2) }}> {{ name }} </a> </td>
+    </tr>
+
+    {% endfor %}
+</table>
+{% endif %}
+
+
+{% endblock %}

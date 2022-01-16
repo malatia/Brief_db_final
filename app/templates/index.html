@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="jumbotron">
+    <h1>Brief Projet Base de données </h1>
+    <p class="lead">Veuillez sélectionner les données qui vous intéressent</p>
+    <div>
+        <form method="POST" action="/results">
+            <select name="variable1">
+                <option value="Job" selected>Job</option>
+                <option value="City">City</option>
+                <option value="Movie">Movie</option>
+                <option value="Country">Country</option>
+                <option value="Domain">Domain</option>
+            </select>
+
+            <select name="variable2">
+                <option value="--" selected>--</option>
+                <option value="Job">Job</option>
+                <option value="City">City</option>
+                <option value="Movie">Movie</option>
+                <option value="Country">Country</option>
+                <option value="Domain">Domain</option>
+            </select>
+            <input type="submit" value="Envoyer le formulaire">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
