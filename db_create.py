@@ -105,9 +105,14 @@ def insert_rows(engine):
 def main():
     #On fait la connection, on crée les tables 
     engine = create_engine(f"mysql+pymysql://{user}:{passw}@127.0.0.1:{port}/{db_name}")
+    print("Connexion à la base réussie")
+    print("-------------")
     Base.metadata.create_all(engine)
+    print("Création des tables réussie")
     #Et on insère les données 
     insert_rows(engine)
+    print("Insertion des données réussie")
+    print("-------------")
 
 if __name__=="__main__":
     main()
