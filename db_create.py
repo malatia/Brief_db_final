@@ -99,7 +99,7 @@ def insert_rows(engine):
             fullname = row["FirstName LastName"]
             email = row["Email Address"]
             session.add(User(fullname = fullname, email = email, job_id = job_id, city_id = city_id, movie_id = movie_id, domain_id =domain_id, country_id = country_id))   
-    session.commit()    
+        session.commit()    
 
 
 def main():
