@@ -3,8 +3,13 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy import create_engine
 
 
+user = ""
+passw = ""
+db_name = ""
+port = "3306"
+
 #Connection à la base de données 
-engine = create_engine("mysql+pymysql://yoyo:Montre83700:)@127.0.0.1:3306/brief_yoan")
+engine = create_engine(f"mysql+pymysql://{user}:{passw}@127.0.0.1:{port}/{db_name}")
 
 
 # Initialisation de l'app
