@@ -7,6 +7,7 @@ Base = declarative_base()
 user = ""
 passw = ""
 db_name = ""
+port = "3306"
 
 #Création des classes qui serviriont de base aux table de la BDD
 class User(Base):
@@ -103,7 +104,7 @@ def insert_rows(engine):
 
 def main():
     #On fait la connection, on crée les tables 
-    engine = create_engine(f"mysql+pymysql://{user}:{passw}:)@127.0.0.1:3306/{db_name}")
+    engine = create_engine(f"mysql+pymysql://{user}:{passw}@127.0.0.1:{port}/{db_name}")
     Base.metadata.create_all(engine)
     #Et on insère les données 
     insert_rows(engine)
