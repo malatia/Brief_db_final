@@ -152,7 +152,7 @@ def specific_variable(name, cat):
     cat = cat.lower()
     with engine.connect() as conn:
         query = (f"Select user.user_id, user.fullname,user.email, job.job_name, domain.domain_name, city.city_name,country.country_name, movie.movie_name " 
-        "FROM User "              
+        "FROM user "              
         "JOIN job ON job.job_id=user.job_id " 
         "JOIN domain ON domain.domain_id=user.domain_id " 
         "JOIN city ON city.city_id=user.city_id "  
