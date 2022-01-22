@@ -30,7 +30,7 @@ def results():
         variable2 = request.form['variable2']
 
         #Si une seule valeur est voulue on va créer un diagramme camembert 
-        if variable2 == "--":
+        if variable2 == "--" or variable1 == variable2:
             results1 = queries.one_variable(variable1)
             results2 = None
 
