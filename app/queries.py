@@ -117,6 +117,9 @@ def two_variables(variable1, variable2):
         [list]:  [Une liste contenant les noms de la catégorie demandée]]
         [list]:  [Une liste contenant les noms de la catégorie demandée]]
     """
+    
+    variable1 = variable1.lower()    
+    variable2 = variable2.lower()
     #On récupère les noms des différentes catégories, ainsi que les associations entre ces différentes catégories
     with engine.connect() as conn:
         result1 = conn.execute(text(f"SELECT {variable1}.{variable1}_name FROM {variable1}"))
