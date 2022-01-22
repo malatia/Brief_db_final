@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import numpy as np 
 import pandas as pd
 
+plt.switch_backend('Agg')
+
 def one_variable(variable):
     """Cette fonction permet de créer un graphique camembert et de retourner les noms d'une catégorie dans la BDD (cette catégorie étant une table dont le nom est indiqué par l'argument "variable")
         Elle ne récupère pas dynamiquement les données à partir de l'argument passé. D'où la grande présence de "if"s répétitifs.
