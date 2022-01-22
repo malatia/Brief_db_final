@@ -23,7 +23,7 @@ Si le terminal ne s'ouvre pas automatiquement : Dans les menus en haut aller dan
 
 Vous êtes normalement maintenant prêts à créer la base de données. 
 
-Ouvrez le fichier "db_create.py" et sur les dans les variables "user", "passw", et "db_name", indiquez les informations de la base de données MySQL dans laquelle vous voulez créer les tables. 
+Ouvrez le fichier "db_create.py" et dans les variables "user", "passw", et "db_name", indiquez les informations de la base de données MySQL dans laquelle vous voulez créer les tables. 
 Ouvrez également le fichier app/__init__.py pour y mettre les mêmes informations
 
 Une fois cela fait, vous pouvez run le fichier "db_create.py".
